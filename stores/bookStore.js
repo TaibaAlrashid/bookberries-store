@@ -3,6 +3,7 @@ import instance from "./instance";
 
 class BookStore {
   products = [];
+  loading = false;
 
   constructor() {
     makeAutoObservable(this);

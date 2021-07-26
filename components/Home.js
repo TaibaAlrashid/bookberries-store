@@ -1,7 +1,13 @@
 import React from "react";
-import { HomeBackground, Title, TopStyling } from "../styles";
+import {
+  HomeBackground,
+  Title,
+  TopStyling,
+  BottomStyling,
+  ButtonStyling,
+} from "../styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <HomeBackground
       source={{
@@ -11,6 +17,11 @@ const Home = () => {
       <TopStyling>
         <Title>BOOKBERRIES</Title>
       </TopStyling>
+      <BottomStyling>
+        <ButtonStyling onPress={() => navigation.navigate("ShopList")}>
+          Click here to skip...
+        </ButtonStyling>
+      </BottomStyling>
     </HomeBackground>
   );
 };

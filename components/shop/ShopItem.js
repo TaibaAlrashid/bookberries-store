@@ -1,13 +1,20 @@
 import React from "react";
-// import { List } from "native-base";
-import { Image, Text, View } from "react-native";
+import { List } from "native-base";
+import { Image, Text } from "react-native";
+import { ShopItemStyled } from "../../styles";
 
-const ShopItem = ({ shop }) => {
+const ShopItem = ({ shop, navigation }) => {
   return (
-    <View>
-      <Image source={{ uri: shop.image }} style={{ width: 100, height: 100 }} />
-      <Text>{shop.name}</Text>
-    </View>
+    <List.Item
+      onPress={() => navigation.navigate("ShopDetail", { shop: shop })}
+    >
+      <Image
+        source={{ uri: shop.image }}
+        alt="Shop Image"
+        style={{ width: 150, height: 100 }}
+      />
+      <ShopItemStyled>{shop.name}</ShopItemStyled>
+    </List.Item>
   );
 };
 
