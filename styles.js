@@ -77,4 +77,8 @@ export const CheckoutButtonText = styled.Text`
   font-size: 20px;
 `;
 
-export const AppText = styled.Text``;
+export const SignoutButton = styled.TouchableOpacity`
+  align-self: stretch;
+  padding: 10px;
+  margin-top: 10px;
+`;
